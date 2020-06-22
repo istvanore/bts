@@ -62,7 +62,8 @@ p{
         left: 50%;
         transform: translate(-50%,-50%);
         border-radius: 34px;
-        width: 930px;
+        width: 100%;
+        max-width: 930px;
         border: 5px solid white;
         overflow: auto;
     }
@@ -86,17 +87,15 @@ p{
     }
     &__talent{
         display: flex;
-        align-items: stretch;
-        justify-content: center;
         .talent{
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 25px;
             position: relative;
-            flex: 0 0 33%;
+            flex: 1;
             &:first-child{
-                justify-content: start;
+                justify-content: flex-start;
                 h2{
                     text-align: left;
                 }
@@ -113,7 +112,7 @@ p{
                     text-align: center;
                 }
              }
-            &:nth-child(2):before, &:nth-child(3):before{
+            &:nth-child(n+2):before{
                 content: "";
                 position: absolute;
                 z-index: 2;
